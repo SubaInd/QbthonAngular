@@ -1,0 +1,72 @@
+<div class ="container">
+    <div class ="row">
+        <div class ="col">
+    <button  (click)="displayscreen()" class="button btn btn-primary">Trigger Mail</button>    
+</div>
+
+<div class ="col">
+    <div [hidden]="!displayTriggerMail">
+        <form [formGroup]="triggerMailForm" >
+            <div style="border:1px solid black">
+            
+            <table>
+                <tr >
+                    <td><label for="mailType">Skills</label></td>
+                    <td><select formControlName="mailType" class="form-control">
+                        <option disabled>Select Mail Type</option>
+                        <option>Know the Anatomy of a MCQ</option>
+                        <option>MCQ Do's & Dont's</option>
+                      </select>
+                    </td>
+                    
+                    
+                   </tr>
+                <tr >
+                    <td><label for="mailFrom">From</label></td>
+                    <td><input type="text" formControlName="mailFrom" class="form-control"  ></td>
+                    
+            </tr>
+                <tr >
+                <td><label for="mailTo">To</label></td>
+                <td><input type="text" formControlName="mailTo" class="form-control"  ></td>                
+            </tr>
+            
+        
+        <tr >
+        <td><label for="mailCc">Cc</label></td>
+        <td><input type="text" formControlName="mailCc" class="form-control"  ></td>                
+        </tr>
+
+        <tr >
+            <td><label for="mailBcc">Bcc</label></td>
+            <td><input type="text" formControlName="mailBcc" class="form-control"  ></td>                
+        </tr>
+            
+        <tr >
+            <td><label for="subject">Subject</label></td>
+            <td><input type="text" formControlName="subject" class="form-control"  ></td>                
+        </tr>
+
+        <tr >
+            <td><label for="attach">Attachments</label></td>
+            <td><input type="text" formControlName="attach" class="form-control"  ></td>
+            <td>  <div class="form-group"><button  class="button btn btn-primary">Browse</button></div></td>                
+            <td>  <div class="form-group"><button  class="button btn btn-primary">Upload</button></div></td>
+        </tr>
+
+        <tr >
+            <td><label for="message">Message</label></td>
+            <td><input type="text" formControlName="message" class="form-control"  ></td>                
+        </tr>
+            <tr >        
+                <td>  <div class="form-group"><button  class="button btn btn-primary">Save</button></div></td>
+                <td>  <div class="form-group"><button  class="button btn btn-primary">Trigger Mail</button></div></td>
+                <td>  <div class="form-group"><button  class="button btn btn-primary">Cancel</button></div></td>
+               </tr>
+        
+                
+            </table>
+        </div>    
+        </form>
+        </div>
+        </div>
